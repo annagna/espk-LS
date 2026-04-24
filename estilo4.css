@@ -1,0 +1,111 @@
+/*Resetar a página*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+/* cabeçalho*/
+
+header{
+    background:rgb(63, 44, 82);
+    color: white;
+    padding: 20px;
+}
+header h1{
+    text-align: center;
+    margin-bottom: 10px;
+}
+img{
+    border-radius: 90%;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+/* hero */
+.hero{
+    background:rgb(152, 117, 235);
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+}
+.hero buttom{
+    margin-top: 15px;
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    background: #rgb(63, 44, 82);
+    cursor: pointer;
+}
+/*servços*/
+.servço{
+    padding:40px 20 px;
+    text-align: center;
+}
+.cards{
+    display: flex; /*alinhamento dos cards*/
+    gap: 20px;
+    margin-top: 20px;
+    justify-cotent: center;
+}
+.card {
+    background: #f4f4f4;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px; 
+}
+.card ul{
+    list-style: square;
+    text-align: left;
+    margin-top: 10px;
+}
+/* definição do estilo para as tabelas*/
+.planos{
+    padding: 40px;
+    text-align: center;
+}
+table{
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+}
+th, td{
+    border: 2px solid #ccc;
+    padding: 10px;
+}
+th{
+    background:rgb(62, 42, 82);
+    color:white;
+}
+/*footer*/
+footer{
+    background: #rgb(62, 42, 82);
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+/*responsividade*/
+@media(max-width: 768px){
+    .menu{
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards{
+        flex-direction: column;
+        lign-items: center;
+    }
+    table{
+        width: 100%;  
+    }
+}
