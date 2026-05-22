@@ -1,0 +1,158 @@
+/*Variáveis CSS: Definimos cores globais para facilitar a manutenção  */
+:root {
+    --cor-primaria:#0984e3;
+    --cor-escura: #2d3436;
+    --cor-fundo: #dfe6e9;
+    --branco: #ffffff;
+    --transicao: 0.3s ease;
+}
+
+/* RESET e BOX MODEL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* CONTAINERS: Limita a largura do conteúdo para não "espalhar" em monitores maiores */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    text-size: 100px;
+}
+
+/*HEADER com FLEXBOX */
+.main-header {
+    background-color: var(--cor-escura);
+    color: var(--branco);
+    padding: 15px 0;
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo span {
+    color: var(--cor-primaria);
+    font-weight: bold;
+}
+
+.nav-menu ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-menu a {
+    color: var(--branco);
+    text-decoration: none;
+    transition: var(--transicao);
+}
+
+.nav-menu a:hover {
+    color: var(--cor-primaria);
+}
+
+/* HERO BANNER com Background */
+.hero-banner {
+    height: 400px;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200') no-repeat center center/cover;
+    /*Background-size: cover faz a imagem preencher o texto verticalmente no banner */
+    display: flex;
+    align-items: center;
+    color: var(--branco);
+    text-align: center;
+}
+.figure {
+  display: flex;
+  flex-direction: column; /* Alinha os itens em vertical (um abaixo do outro) */
+}
+
+.figcaption {
+  clear: both; /* Garante que ele saia de perto de qualquer elemento com float */
+  display: block; /* Ocupa a largura inteira, empurrando para a próxima linha */
+}
+.container {
+  display: flex;       /* Ativa o Flexbox no container pai */
+  flex-direction: row; /* Coloca os elementos filhos um do lado do outro (padrão) */
+  gap: 20px;          /* Cria um espaço/espaçamento entre os dois artigos */
+}
+
+.artigo {
+  flex: 1;            /* Faz com que ambos os artigos tenham exatamente o mesmo tamanho */
+  background-color: #f4f4f4;
+  padding: 15px;
+  border: 1px solid #ddd;
+}
+
+/* Grid de produtos e Cards (BOX MODEL) */
+.titulo-secao {
+    text-align: center;
+    margin: 40px 0;
+    color: var(--cor-escura);
+}
+
+.grid-produtos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.card {
+    background: var(--branco);
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de trazer para frente */
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1)
+}
+
+.card-img {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.card-corpo {
+    padding: 20px;
+}
+
+.card-corpo h3 {
+    margin-bottom: 10px;
+}
+
+.card-corpo p {
+    color: var(--cor-primaria);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+
+/* FOOTER */
+.footer-simples {
+    background: var (--cor-escura);
+    color: var (--branco);
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* RSPONSIVIDADE */
+@media (max-width 768px) {
+    .hero-banner h1 {font-size: 1.8rem;}
+    .card {width: 100%;}
+}
